@@ -4,12 +4,12 @@ public class Main {
         Scanner s = new Scanner(System.in) ;
         Formatter f = new Formatter();
         double[][] matrix = new double[12][12];
-        double row = s.nextDouble() , sum = 0 ;
+        double col = s.nextDouble() , sum = 0 ;
         char operation = s.next().charAt(0);
         for (int i = 0 ; i < 12 ; i++) {
             for (int j = 0 ; j < 12 ; j++) {
                 matrix[i][j] = s.nextDouble() ;
-                if(i == row) {
+                if(j == col) {
                     sum += matrix[i][j];
                 }
             }
