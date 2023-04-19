@@ -1,0 +1,55 @@
+
+////////////////////////////////////////////////
+test 1 every thing in normal
+Library library = new Library();
+        Services services = new ServicresImpl() ;
+        Book[] books = new Book[3];
+        books[0] = new Book(1 , "math" , "DR.Hagag" , "1" , true);
+        books[1] = new Book(2 , "science" , "DR.Taha" , "8" , true);
+        books[2] = new Book(3 , "Chemistry" , "DR.Sayed" , "5" , true);
+
+        User[] users = new User[5];
+        users[0] = new User(1 , "Mohamed");
+        users[1] = new User(2 , "Ahmed");
+        users[2] = new User(3 , "Ali");
+        users[3] = new User(4 , "Amr");
+        users[4] = new User(5 , "Saied");
+
+        for(int i = 0 ; i < 3 ; i++){
+            services.addBook(library , books[i]);
+        }
+        for(int i = 0 ; i < 5 ; i++){
+            services.addUser(library , users[i]);
+        }
+
+        services.checkout(users[0] , books[2] , library);
+        services.checkout(users[1] , books[0] , library);
+        services.checkout(users[1] , books[1] , library);
+
+        services.displayBooks(library);
+        System.out.println("_______________________________________________________________________________________________");
+        services.displayBorrowedBooks(users[0]);
+        System.out.println("_______________________________________________________________________________________________");
+        services.displayBorrowedBooks(users[1]);
+        System.out.println("_______________________________________________________________________________________________");
+        services.displayBorrowedBooks(users[2]);
+
+//////////////////////////////////////////////////////////////////////////////
+
+when book is is not valid (id <= 0 or id is replicated)
+
+books[0] = new Book(1 , "math" , "DR.Hagag" , "1" , true);
+books[1] = new Book(-2 , "science" , "DR.Taha" , "8" , true);
+books[2] = new Book(1 , "Chemistry" , "DR.Sayed" , "5" , true);
+
+//////////////////////////////////////////////////////////////////////////////
+
+when user id is not valid (id <= 0 or id is replicated)
+
+users[0] = new User(1 , "Mohamed");
+users[1] = new User(-2 , "Ahmed");
+users[2] = new User(1 , "Ali");
+users[3] = new User(4 , "Amr");
+users[4] = new User(5 , "Saied");
+
+//////////////////////////////////////////////////////////////////////////////

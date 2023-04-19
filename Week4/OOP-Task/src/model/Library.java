@@ -1,33 +1,36 @@
 package model;
 
+import java.util.LinkedList;
 import java.util.List;
 
 public class Library {
 
-    private String libraryName , libraryCode ;
-    private List<Book> books ;
+    static private String libraryName = "Benha library", libraryCode = "S76N10";
+    private List<Book> books = new LinkedList<>();
+    private List<User> users = new LinkedList<>();
+
+    public List<User> getUsers() {
+        return users;
+    }
+
+    public void setUsers(List<User> users) {
+        this.users = users;
+    }
+
+    public void setBooks(List<Book> books){
+        this.books = books ;
+    }
 
     public String getLibraryName() {
         return libraryName;
-    }
-
-    public void setLibraryName(String libraryName) {
-        this.libraryName = libraryName;
     }
 
     public String getLibraryCode() {
         return libraryCode;
     }
 
-    public void setLibraryCode(String libraryCode) {
-        this.libraryCode = libraryCode;
-    }
-
     public List<Book> getBooks() {
         return books;
     }
 
-    public void setBooks(List<Book> books) {
-        this.books = books;
-    }
 }
