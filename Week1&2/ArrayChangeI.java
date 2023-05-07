@@ -1,11 +1,11 @@
 
 import java.util.* ;
-public class Array_change_I {
+public class ArrayChangeI {
     public static void main(String[] args) {
-        Scanner s = new Scanner(System.in) ;
+        Scanner scanner = new Scanner(System.in) ;
         int[] arr = new int[20];
         for (int i = 0 ; i < 20 ; i++){
-            arr[i] = s.nextInt() ;
+            arr[i] = scanner.nextInt() ;
         }
         int l = 0 , r = 19 ;
         while(l < r){

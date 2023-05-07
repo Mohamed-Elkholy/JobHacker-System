@@ -1,15 +1,15 @@
 
 import java.util.*;
 
-public class Area_of_a_Circle {
+public class AreaOfCircle {
     public static final double PI = 3.14159;
     public static double getArea(double r){
         return PI * Math.pow(r , 2);
     }
     public static void main(String[] args) {
-        Scanner s = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
         Formatter formatter = new Formatter();
-        double r = s.nextDouble();
+        double r = scanner.nextDouble();
         formatter.format("%.4f" , getArea(r));
         System.out.println("A=" + formatter);
     }

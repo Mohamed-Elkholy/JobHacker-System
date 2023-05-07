@@ -1,11 +1,11 @@
 import java.util.* ;
-public class Array_Fill_II {
+public class ArrayFillII {
     public static void main(String[] args) {
-        Scanner s = new Scanner(System.in) ;
+        Scanner scanner = new Scanner(System.in) ;
         int[] arr = new int[1000];
-        int t = s.nextInt() ;
+        int mod = scanner.nextInt() ;
         for(int i = 0 ; i < 1000 ; i++) {
-            arr[i] = i % t ;
+            arr[i] = i % mod ;
         }
         for(int i = 0 ; i < 1000 ; i++) {
             System.out.println("N[" + i + "] = " + arr[i]);
